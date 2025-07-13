@@ -1,0 +1,119 @@
+{% extends 'tasks/base.html' %}
+{% block title %}My Tasks{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold">My Tasks</h1>
+        <a href="{% url 'create-task' %}" class="btn btn-primary">
+            + Add Task
+        </a>
+    </div>
+
+    {% if messages %}
+    <div class="alert alert-info mb-4">
+        {% for message in messages %}
+        <div>{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="row">
+        <!-- Pending Tasks Column -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Pending</h5>
+                </div>
+                <div class="card-body p-0">
+                    {% for task in pending_tasks %}
+                    <div class="p-3 border-bottom">
+                        <h6>{{ task.title }}</h6>
+                        <small class="text-muted">
+                            {% if task.description %}
+                            <strong>Description:</strong>{{task.description}}<br>
+                            {% endif %}
+                            <strong>Priority:</strong> {{ task.get_priority_display }}<br>
+                            <strong>Due:</strong> {{ task.due_date }}<br>
+                            {% if task.dependency %}
+                            <strong>Depends on:</strong> {{ task.dependency.title }}
+                            {% endif %}
+                        </small>
+                        <div class="mt-2">
+                            <a href="{% url 'update-task' task.id %}" class="btn btn-sm btn-outline-primary me-1">Edit</a>
+                            <a href="{% url 'delete-task' task.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <div class="p-3 text-muted">No pending tasks</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <!-- In Progress Tasks Column -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-warning text-white">
+                    <h5 class="mb-0">In Progress</h5>
+                </div>
+                <div class="card-body p-0">
+                    {% for task in in_progress_tasks %}
+                    <div class="p-3 border-bottom">
+                        <h6>{{ task.title }}</h6>
+                        <small class="text-muted">
+                            {% if task.description %}
+                            <strong>Description:</strong>{{task.description}}<br>
+                            {% endif %}
+                            <strong>Priority:</strong> {{ task.get_priority_display }}<br>
+                            <strong>Due:</strong> {{ task.due_date }}<br>
+                            {% if task.dependency %}
+                            <strong>Depends on:</strong> {{ task.dependency.title }}
+                            {% endif %}
+                        </small>
+                        <div class="mt-2">
+                            <a href="{% url 'update-task' task.id %}" class="btn btn-sm btn-outline-primary me-1">Edit</a>
+                            <a href="{% url 'delete-task' task.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <div class="p-3 text-muted">No tasks in progress</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <!-- Completed Tasks Column -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Completed</h5>
+                </div>
+                <div class="card-body p-0">
+                    {% for task in completed_tasks %}
+                    <div class="p-3 border-bottom">
+                        <h6>{{ task.title }}</h6>
+                        <small class="text-muted">
+                            {% if task.description %}
+                            <strong>Description:</strong>{{task.description}}<br>
+                            {% endif %}
+                            <strong>Priority:</strong> {{ task.get_priority_display }}<br>
+                            <strong>Due:</strong> {{ task.due_date }}<br>
+                            {% if task.dependency %}
+                            <strong>Depends on:</strong> {{ task.dependency.title }}
+                            {% endif %}
+                        </small>
+                        <div class="mt-2">
+                            <a href="{% url 'update-task' task.id %}" class="btn btn-sm btn-outline-primary me-1">Edit</a>
+                            <a href="{% url 'delete-task' task.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <div class="p-3 text-muted">No completed tasks</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

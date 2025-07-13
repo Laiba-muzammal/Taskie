@@ -1,0 +1,123 @@
+/* Simplified TaskFlow CSS - Basic Bootstrap Enhancement */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #6f42c1; /* Purple color */
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-primary:hover {
+    background-color: #5a32a8;
+    border-color: #5a32a8;
+}
+
+.btn-outline-primary {
+    color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-outline-primary:hover {
+    background-color: #6f42c1;
+    color: white;
+}
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: #6f42c1;
+    color: white;
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+    padding: 0.75rem 1.25rem;
+}
+
+/* Form styling */
+.form-control:focus,
+.form-select:focus {
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.1);
+}
+
+/* Alert styling */
+.alert {
+    border-radius: 0.5rem;
+}
+
+/* Task status colors */
+.bg-todo {
+    background-color: #e9ecef;
+}
+
+.bg-in-progress {
+    background-color: #fff3cd;
+}
+
+.bg-done {
+    background-color: #d4edda;
+}
+
+/* Footer styling */
+footer {
+    background-color: white;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* Utility spacing */
+.py-6 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.25rem;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+/* Force purple navbar */
+.navbar.bg-primary {
+    background-color: #6f42c1 !important;
+    border-bottom: 2px solid #5a32a8;
+}
+
+/* Purple buttons */
+.btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-primary:hover {
+    background-color: #5a32a8;
+    border-color: #5a32a8;
+}
+
+.bg-todo {
+    background-color: #6f42c1; /* Bootstrap purple color */
+    color: white;
+}

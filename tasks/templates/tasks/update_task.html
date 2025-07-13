@@ -1,0 +1,62 @@
+{% extends 'tasks/base.html' %}
+{% block title %}Update Task{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">  <!-- Increased width for better layout -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">Update Task</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{% url 'update-task' task.id %}">
+                        {% csrf_token %}
+                        <!-- Title -->
+                        <div class="mb-3">
+                            {{ form.title.label_tag }}
+                            {{ form.title }}
+                        </div>
+                        
+                        <!-- Description -->
+                        <div class="mb-3">
+                            {{ form.description.label_tag }}
+                            {{ form.description }}
+                        </div>
+                        
+                        <!-- Status and Priority -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                {{ form.status.label_tag }}
+                                {{ form.status }}
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                {{ form.priority.label_tag }}
+                                {{ form.priority }}
+                            </div>
+                        </div>
+                        
+                        <!-- Due Date -->
+                        <div class="mb-3">
+                            {{ form.due_date.label_tag }}
+                            {{ form.due_date }}
+                        </div>
+                        
+                        <!-- Dependency -->
+                        <div class="mb-3">
+                            {{ form.dependency.label_tag }}
+                            {{ form.dependency }}
+                        </div>
+                        
+                        <!-- Buttons -->
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                            <a href="{% url 'task-list' %}" class="btn btn-outline-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

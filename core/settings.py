@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security
 SECRET_KEY = 'django-insecure-8nw#i+_%g8b1g%axm3%-7w(u!k0^933okp8#kx&=x%pe4u=osi'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['115.186.182.200','taskie.live']
 
 # Application definition
 INSTALLED_APPS = [

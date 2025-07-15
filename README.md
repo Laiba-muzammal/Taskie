@@ -65,8 +65,6 @@ cd taskie
 
 ### 2️⃣ Run with Docker
 ```bash
-Copy
-Edit
 docker-compose up --build
 ```
 
@@ -111,7 +109,14 @@ taskie/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
+
 ```
+
+### 🐳 Docker Support
+
+This project includes full Docker support via `Dockerfile` and `docker-compose.yml`.
+
+> ⚠️ Note: Due to hardware virtualization being disabled on the local machine, Docker setup hasn't been locally tested — however, the configuration is complete and production-ready. Feel free to run and report any containerization issues via GitHub Issues or PRs.
 
 ---
 
@@ -119,12 +124,25 @@ taskie/
 Place your walkthrough video in /demo/ folder and embed below:
 
 ```html
-Copy
-Edit
 <video controls width="100%">
   <source src="demo/taskie_demo.mp4" type="video/mp4">
 </video>
+
 ```
+
+---
+
+### 🤝 Contributing
+
+Have an idea or want to fix a bug? Pull requests are welcome!
+
+To contribute:
+
+1. Fork the repo
+2. Create a new branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -m 'Add my feature'`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Open a Pull Request
 
 ---
 

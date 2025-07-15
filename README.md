@@ -70,11 +70,15 @@ Edit
 docker-compose up --build
 ```
 
+---
+
 ### Open in browser:
 
 🌐 App: http://localhost:8000
 
 📘 API Docs: http://localhost:8000/api/docs/
+
+---
 
 ### 🔌 API Endpoints
 Interact via Swagger UI or Postman:
@@ -88,6 +92,8 @@ PUT     /api/tasks/{id}/    → Update task
 DELETE  /api/tasks/{id}/    → Delete task  
 GET     /api/history/       → View change history
 ```
+
+---
 
 ### 🧩 Project Structure
 ```graphql
@@ -107,6 +113,8 @@ taskie/
 └── README.md
 ```
 
+---
+
 ### 🎥 Optional Demo Video
 Place your walkthrough video in /demo/ folder and embed below:
 
@@ -118,6 +126,7 @@ Edit
 </video>
 ```
 
+---
+
 ### 🧾 License
 MIT License © Laiba Muzammal
-

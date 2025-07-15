@@ -1,5 +1,3 @@
-# Taskie
-
 <h1 align="center">🧠 Taskie - Smart Task Manager</h1>
 
 <p align="center">

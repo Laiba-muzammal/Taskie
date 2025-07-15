@@ -1,128 +1,113 @@
-<h1 align="center">🧠 Taskie - Smart Task Manager</h1>
+<h1 align="center">🧠 Taskie — Smart Task Manager</h1>
 
 <p align="center">
-  A beautiful, Dockerized Django-based task management system with full task lifecycle, history tracking, Swagger API support, and user authentication.
+  A modern, API-powered, Dockerized task management system built with Django & DRF. Taskie lets users manage daily tasks with full lifecycle control, history tracking, and a clean UI — all wrapped with Swagger-documented REST APIs.
 </p>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Status-Production-green" alt="status"/>
-  <img src="https://img.shields.io/badge/Django-4.x-green" alt="django"/>
-  <img src="https://img.shields.io/badge/Docker-Enabled-blue" alt="docker"/>
+  <img src="https://img.shields.io/badge/Status-Production-brightgreen" alt="status"/>
+  <img src="https://img.shields.io/badge/Django-4.x-success" alt="django"/>
+  <img src="https://img.shields.io/badge/DRF-Enabled-blue" alt="drf"/>
+  <img src="https://img.shields.io/badge/Docker-Ready-blue" alt="docker"/>
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="license"/>
 </div>
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-- 🔐 User Authentication (Signup/Login)
-- 📋 Task CRUD (Create, Read, Update, Delete)
-- ⛓ Task Dependencies
-- 🔄 Statuses: Pending | In Progress | Completed
-- 🕓 Task History Log (Created / Updated / Deleted)
-- 🔍 Task Search in History
-- 🌐 Swagger UI (API Docs via `drf-yasg`)
-- 🐳 Fully Dockerized Environment
+- 🔐 User Authentication (Signup, Login, Logout)
+- 📋 Full Task CRUD Operations
+- 🔄 Task Status Workflow: Pending → In Progress → Completed
+- 🔗 Task Dependencies Linking
+- 🕓 Change History & Timeline Logging
+- 🔍 Searchable Task History
+- 🌐 Swagger-based API Documentation (`/api/docs/`)
+- 🐳 Dockerized for Easy Setup & Deployment
 
 ---
 
-## 🖼️ UI Preview
-
-> Add your screenshots in the `screenshots/` folder.
+## 📸 Preview
 
 <table>
   <tr>
-    <td><img src="screenshots/dashboard.png" width="100%"></td>
-    <td><img src="screenshots/history.png" width="100%"></td>
+    <td><img src="screenshots/dashboard.png" width="100%"/></td>
+    <td><img src="screenshots/history.png" width="100%"/></td>
   </tr>
   <tr>
-    <td align="center">Dashboard View</td>
-    <td align="center">Task History</td>
+    <td align="center">Task Dashboard</td>
+    <td align="center">Change History View</td>
   </tr>
 </table>
 
 ---
 
-## 🛠 Tech Stack
+## ⚙️ Tech Stack
 
-| Layer       | Technology              |
-|-------------|--------------------------|
-| Backend     | Django 4.x, DRF          |
-| Database    | SQLite (default)         |
-| API Docs    | Swagger (drf-yasg)       |
-| Frontend    | HTML, Bootstrap 5        |
-| DevOps      | Docker + Docker Compose  |
+| Layer      | Technology                |
+|------------|---------------------------|
+| Backend    | Django 4.x, DRF            |
+| Frontend   | HTML, Bootstrap 5          |
+| Database   | SQLite (dev) / PostgreSQL (prod-ready) |
+| DevOps     | Docker, Docker Compose     |
+| API Docs   | Swagger via `drf-yasg`     |
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Setup Instructions
 
 ### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/Laiba-muzammal/taskie.git
 cd taskie
-````
-
-### 2️⃣ Run with Docker
-
-```bash
+2️⃣ Run with Docker
+bash
+Copy
+Edit
 docker-compose up --build
-```
+Open in browser:
 
-Then open:
+🌐 App: http://localhost:8000
 
-* 🌐 App: [http://localhost:8000](http://localhost:8000)
-* 📘 Swagger: [http://localhost:8000/api/docs/](http://localhost:8000/api/docs/)
+📘 API Docs: http://localhost:8000/api/docs/
 
----
+🔌 API Endpoints
+Interact via Swagger UI or Postman:
 
-## 🔌 API Access (via Swagger)
-
-Explore and test endpoints like:
-
-* `GET /api/tasks/`
-* `POST /api/tasks/`
-* `PUT /api/tasks/{id}/`
-* `DELETE /api/tasks/{id}/`
-
-➡️ Visit `/api/docs/` for full interactive documentation.
-
----
-
-## 📁 Project Structure
-
-```
+pgsql
+Copy
+Edit
+GET     /api/tasks/         → List all tasks  
+POST    /api/tasks/         → Create new task  
+PUT     /api/tasks/{id}/    → Update task  
+DELETE  /api/tasks/{id}/    → Delete task  
+GET     /api/history/       → View change history  
+🧩 Project Structure
+graphql
+Copy
+Edit
 taskie/
-├── tasks/              # Core app with models/views
-├── api/                # DRF views and serializers
-├── templates/          # HTML pages
-├── static/             # CSS / JS / assets
+├── core/                 # Django project settings (urls, wsgi, asgi)
+├── tasks/                # Main app: models, views, forms, migrations
+├── api/                  # DRF views and serializers (optional separation)
+├── templates/            # HTML templates for UI
+├── static/               # CSS, JS, images
+├── screenshots/          # UI preview assets
+├── demo/                 # Optional walkthrough video
 ├── Dockerfile
 ├── docker-compose.yml
+├── requirements.txt
 └── README.md
-```
+🎥 Optional Demo Video
+Place your walkthrough video in /demo/ folder and embed below:
 
----
-
-## 🎬 Optional: Add Demo Video
-
-Place demo video in `/demo/` and embed like this:
-
-```html
+html
+Copy
+Edit
 <video controls width="100%">
   <source src="demo/taskie_demo.mp4" type="video/mp4">
 </video>
-```
-
----
-
-## 📄 License
-
-MIT License © [Laiba Muzammal](https://github.com/Laiba-muzammal)
-
----
-
-> Built with 💙 for learning, personal productivity, and resume building.
-
+🧾 License
+MIT License © Laiba Muzammal
 

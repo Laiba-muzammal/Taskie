@@ -65,8 +65,6 @@ cd taskie
 
 ### 2️⃣ Run with Docker
 ```bash
-Copy
-Edit
 docker-compose up --build
 ```
 

@@ -130,6 +130,8 @@ Place your walkthrough video in /demo/ folder and embed below:
 
 ```
 
+---
+
 ### 🤝 Contributing
 
 Have an idea or want to fix a bug? Pull requests are welcome!

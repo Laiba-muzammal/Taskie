@@ -8,114 +8,109 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Status-Production-green" alt="status"/>
-  <img src="https://img.shields.io/badge/Django-4.x-green" alt="django"/>
-  <img src="https://img.shields.io/badge/Docker-Enabled-blue" alt="docker"/>
-  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="license"/>
-</div>
+# 🧠 Taskie – Smart Task Manager
+
+A clean, full-featured task management system built with Django and Docker. Taskie helps users manage their daily tasks with full CRUD support, task history tracking, and a beautiful UI – now with Swagger-based API documentation!
 
 ---
 
-## 📸 Screenshots
+## ✨ Key Features
 
-> (Insert screenshots of your UI and Swagger if available)
-
----
-
-## ⚙️ Features
-
-- 👤 **Authentication** (Sign up / Login / Logout)
-- 📋 **Task CRUD** (Create / Edit / Delete)
-- 🔁 **Dependencies** (Link tasks together)
-- 🔄 **Task Statuses** (Pending / In Progress / Completed)
-- 🕓 **Task History Log** (View what was updated/deleted/created)
-- 🔍 **Search Task History**
-- 🌐 **Swagger UI** – auto-documented API
-- 🐳 **Fully Dockerized Setup**
+- 🔐 User Authentication (Signup/Login)
+- 📋 Task CRUD (Create, Read, Update, Delete)
+- ⛓ Task Dependencies
+- 🔄 Statuses: Pending | In Progress | Completed
+- 🕓 Task History Log (Created / Updated / Deleted)
+- 🌐 Swagger UI (API Docs via `drf-yasg`)
+- 🐳 Dockerized Environment
 
 ---
 
-## 🧰 Tech Stack
+## 🖼️ UI Preview
 
-| Tech | Purpose |
-|------|---------|
-| **Django** | Core backend logic |
-| **Django REST Framework** | API creation |
-| **SQLite** | Dev DB (can switch to PostgreSQL easily) |
-| **Swagger (drf-yasg)** | Auto-generated API docs |
-| **Docker + Docker Compose** | Environment setup |
+> Add your screenshots in a `screenshots/` folder and use the format below.
+
+<table>
+  <tr>
+    <td><img src="screenshots/dashboard.png" width="100%"></td>
+    <td><img src="screenshots/history.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center">Dashboard View</td>
+    <td align="center">Task History</td>
+  </tr>
+</table>
 
 ---
 
-## 🐳 Run Locally with Docker
+## 🛠 Tech Stack
 
-### 📦 Requirements
-- Docker & Docker Compose installed
+- **Backend**: Django 4.x, Django REST Framework
+- **Database**: SQLite (default) — can switch to PostgreSQL
+- **Frontend**: HTML, Bootstrap 5
+- **Docs**: Swagger (via drf-yasg)
+- **Containerization**: Docker + Docker Compose
 
-### 🧪 Quick Setup
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-# Clone the repo
-git clone https://github.com/yourusername/taskie.git
+git clone https://github.com/Laiba-muzammal/taskie.git
 cd taskie
-
-# Build and run containers
+2. Run with Docker
+bash
+Copy
+Edit
 docker-compose up --build
-````
+Visit:
 
-🔗 Visit:
+🌐 App: http://localhost:8000
 
-* App: [http://localhost:8000](http://localhost:8000)
-* Swagger Docs: [http://localhost:8000/api/docs/](http://localhost:8000/api/docs/)
+📘 Docs: http://localhost:8000/api/docs/
 
----
+🔌 API Access
+Explore RESTful endpoints like:
 
-## 📂 Project Structure
+GET /api/tasks/
 
-```bash
-├── tasks/               # App containing models, views, etc.
-├── templates/           # HTML templates
-├── static/              # CSS / JS / Assets
-├── api/                 # DRF views + serializers
-├── Dockerfile           # Docker image build config
-├── docker-compose.yml   # Container orchestration
-├── requirements.txt     # Python dependencies
-└── README.md            # You're here!
-```
+POST /api/tasks/
 
----
+PUT /api/tasks/{id}/
 
-## 💡 API Preview (via Swagger)
+DELETE /api/tasks/{id}/
 
-You can explore API endpoints for:
+Go to /api/docs/ for full interactive Swagger UI.
 
-* GET, POST, PUT, DELETE tasks
-* View history
-* Create users
+📁 Project Layout
+graphql
+Copy
+Edit
+taskie/
+│
+├── tasks/              # Core app with models/views
+├── api/                # DRF views and serializers
+├── templates/          # HTML pages
+├── static/             # CSS / assets
+├── Dockerfile
+├── docker-compose.yml
+└── README.md
+📸 Assets
+Add dashboard.png, history.png in screenshots/ folder
 
-➡️ Just visit `/api/docs/`
+(Optional) Add a demo walkthrough video in /demo/ and embed it:
 
----
+html
+Copy
+Edit
+<!-- Inside README.md if GitHub supports video in your case -->
+<video controls width="100%">
+  <source src="demo/taskie_demo.mp4" type="video/mp4">
+</video>
 
-## 🛠️ Still Improving...
+📄 License
+MIT License © Laiba Muzammal
 
-* [ ] Admin Panel polish
-* [ ] Email reminders for due tasks
-* [ ] Role-based access control (maybe 👀)
-
----
-
-## 🤝 Contributing
-
-Found a bug or want to suggest a feature?
-PRs are welcome. Fork the repo, make changes, and submit!
-
----
-
-## 🧾 License
-
-MIT License © [Laiba Muzammal](https://github.com/Laiba-muzammal)
-
----
-
-> Built for personal productivity, resume strength & growth 🚀
-
+Built with 💙 for learning, growth, and resume building. 

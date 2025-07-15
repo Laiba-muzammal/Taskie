@@ -9,7 +9,7 @@ urlpatterns = [
     path('delete/<int:id>/', views.deleteTask, name='delete-task'),
     path('create-task/', views.create_task, name="create-task"),
     path('update/<int:id>/', views.update, name="update-task"),
-    path('login/', auth_views.LoginView.as_view(template_name='tasks/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='tasks/logged_out.html', next_page=None ), name='logout'),
-    
+    path('login/', auth_views.LoginView.as_view(), name='login'),  
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'), 
+    path('task_history/', views.task_history, name='task-history')
 ]

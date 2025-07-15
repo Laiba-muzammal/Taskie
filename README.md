@@ -99,6 +99,8 @@ taskie/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
+```
+
 🎥 Optional Demo Video
 Place your walkthrough video in /demo/ folder and embed below:
 

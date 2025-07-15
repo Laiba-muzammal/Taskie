@@ -61,30 +61,36 @@
 ```bash
 git clone https://github.com/Laiba-muzammal/taskie.git
 cd taskie
-2️⃣ Run with Docker
-bash
+```
+
+### 2️⃣ Run with Docker
+```bash
 Copy
 Edit
 docker-compose up --build
-Open in browser:
+```
+
+### Open in browser:
 
 🌐 App: http://localhost:8000
 
 📘 API Docs: http://localhost:8000/api/docs/
 
-🔌 API Endpoints
+### 🔌 API Endpoints
 Interact via Swagger UI or Postman:
 
-pgsql
+```pgsql
 Copy
 Edit
 GET     /api/tasks/         → List all tasks  
 POST    /api/tasks/         → Create new task  
 PUT     /api/tasks/{id}/    → Update task  
 DELETE  /api/tasks/{id}/    → Delete task  
-GET     /api/history/       → View change history  
-🧩 Project Structure
-graphql
+GET     /api/history/       → View change history
+```
+
+### 🧩 Project Structure
+```graphql
 Copy
 Edit
 taskie/
@@ -101,15 +107,17 @@ taskie/
 └── README.md
 ```
 
-🎥 Optional Demo Video
+### 🎥 Optional Demo Video
 Place your walkthrough video in /demo/ folder and embed below:
 
-html
+```html
 Copy
 Edit
 <video controls width="100%">
   <source src="demo/taskie_demo.mp4" type="video/mp4">
 </video>
-🧾 License
+```
+
+### 🧾 License
 MIT License © Laiba Muzammal
 

@@ -30,6 +30,7 @@
 ## 📸 Preview
 
 <table> <tr> <td><img src="Taskie/screenshots/landing_page.png" width="100%"/></td> <td><img src="Taskie/screenshots/signup.png" width="100%"/></td> <td><img src="Taskie/screenshots/login.png" width="100%"/></td> </tr> <tr> <td align="center">Landing Page</td> <td align="center">Signup</td> <td align="center">Login</td> </tr> <tr> <td><img src="Taskie/screenshots/home.png" width="100%"/></td> <td><img src="Taskie/screenshots/dashboard.png" width="100%"/></td> <td><img src="Taskie/screenshots/create_task.png" width="100%"/></td> </tr> <tr> <td align="center">Home</td> <td align="center">Dashboard</td> <td align="center">Create Task</td> </tr> <tr> <td><img src="Taskie/screenshots/saved_task.png" width="100%"/></td> <td><img src="Taskie/screenshots/history.png" width="100%"/></td> <td><img src="Taskie/screenshots/history_changes.png" width="100%"/></td> </tr> <tr> <td align="center">Saved Task</td> <td align="center">History</td> <td align="center">History Changes</td> </tr> </table>
+
 ---
 
 ## ⚙️ Tech Stack

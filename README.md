@@ -29,16 +29,7 @@
 
 ## 📸 Preview
 
-<table>
-  <tr>
-    <td><img src="screenshots/dashboard.png" width="100%"/></td>
-    <td><img src="screenshots/history.png" width="100%"/></td>
-  </tr>
-  <tr>
-    <td align="center">Task Dashboard</td>
-    <td align="center">Change History View</td>
-  </tr>
-</table>
+<table> <tr> <td><img src="screenshots/landing_page.png" width="100%"/></td> <td><img src="screenshots/signup.png" width="100%"/></td> </tr> <tr> <td align="center">Landing Page</td> <td align="center">Signup Screen</td> </tr> <tr> <td><img src="screenshots/login.png" width="100%"/></td> <td><img src="screenshots/home.png" width="100%"/></td> </tr> <tr> <td align="center">Login Screen</td> <td align="center">Home Screen</td> </tr> <tr> <td><img src="screenshots/dashboard.png" width="100%"/></td> <td><img src="screenshots/saved_task.png" width="100%"/></td> </tr> <tr> <td align="center">Task Dashboard</td> <td align="center">Saved Task View</td> </tr> <tr> <td><img src="screenshots/history.png" width="100%"/></td> <td><img src="screenshots/history_changes.png" width="100%"/></td> </tr> <tr> <td align="center">Change History</td> <td align="center">Detailed History Changes</td> </tr> <tr> <td><img src="screenshots/create_task.png" width="100%"/></td> <td></td> </tr> <tr> <td align="center">Create Task View</td> <td align="center"></td> </tr> </table>
 
 ---
 

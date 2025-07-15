@@ -120,18 +120,6 @@ This project includes full Docker support via `Dockerfile` and `docker-compose.y
 
 ---
 
-### 🎥 Optional Demo Video
-Place your walkthrough video in /demo/ folder and embed below:
-
-```html
-<video controls width="100%">
-  <source src="demo/taskie_demo.mp4" type="video/mp4">
-</video>
-
-```
-
----
-
 ### 🤝 Contributing
 
 Have an idea or want to fix a bug? Pull requests are welcome!

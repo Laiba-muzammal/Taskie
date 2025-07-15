@@ -6,9 +6,10 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Status-Production-green" alt="status"/>
-# 🧠 Taskie – Smart Task Manager
-
-A clean, full-featured task management system built with Django and Docker. Taskie helps users manage their daily tasks with full CRUD support, task history tracking, and a beautiful UI – now with Swagger-based API documentation!
+  <img src="https://img.shields.io/badge/Django-4.x-green" alt="django"/>
+  <img src="https://img.shields.io/badge/Docker-Enabled-blue" alt="docker"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="license"/>
+</div>
 
 ---
 
@@ -19,14 +20,15 @@ A clean, full-featured task management system built with Django and Docker. Task
 - ⛓ Task Dependencies
 - 🔄 Statuses: Pending | In Progress | Completed
 - 🕓 Task History Log (Created / Updated / Deleted)
+- 🔍 Task Search in History
 - 🌐 Swagger UI (API Docs via `drf-yasg`)
-- 🐳 Dockerized Environment
+- 🐳 Fully Dockerized Environment
 
 ---
 
 ## 🖼️ UI Preview
 
-> Add your screenshots in a `screenshots/` folder and use the format below.
+> Add your screenshots in the `screenshots/` folder.
 
 <table>
   <tr>
@@ -43,72 +45,84 @@ A clean, full-featured task management system built with Django and Docker. Task
 
 ## 🛠 Tech Stack
 
-- **Backend**: Django 4.x, Django REST Framework
-- **Database**: SQLite (default) — can switch to PostgreSQL
-- **Frontend**: HTML, Bootstrap 5
-- **Docs**: Swagger (via drf-yasg)
-- **Containerization**: Docker + Docker Compose
+| Layer       | Technology              |
+|-------------|--------------------------|
+| Backend     | Django 4.x, DRF          |
+| Database    | SQLite (default)         |
+| API Docs    | Swagger (drf-yasg)       |
+| Frontend    | HTML, Bootstrap 5        |
+| DevOps      | Docker + Docker Compose  |
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/Laiba-muzammal/taskie.git
 cd taskie
-2. Run with Docker
-bash
-Copy
-Edit
+````
+
+### 2️⃣ Run with Docker
+
+```bash
 docker-compose up --build
-Visit:
+```
 
-🌐 App: http://localhost:8000
+Then open:
 
-📘 Docs: http://localhost:8000/api/docs/
+* 🌐 App: [http://localhost:8000](http://localhost:8000)
+* 📘 Swagger: [http://localhost:8000/api/docs/](http://localhost:8000/api/docs/)
 
-🔌 API Access
-Explore RESTful endpoints like:
+---
 
-GET /api/tasks/
+## 🔌 API Access (via Swagger)
 
-POST /api/tasks/
+Explore and test endpoints like:
 
-PUT /api/tasks/{id}/
+* `GET /api/tasks/`
+* `POST /api/tasks/`
+* `PUT /api/tasks/{id}/`
+* `DELETE /api/tasks/{id}/`
 
-DELETE /api/tasks/{id}/
+➡️ Visit `/api/docs/` for full interactive documentation.
 
-Go to /api/docs/ for full interactive Swagger UI.
+---
 
-📁 Project Layout
-graphql
-Copy
-Edit
+## 📁 Project Structure
+
+```
 taskie/
-│
 ├── tasks/              # Core app with models/views
 ├── api/                # DRF views and serializers
 ├── templates/          # HTML pages
-├── static/             # CSS / assets
+├── static/             # CSS / JS / assets
 ├── Dockerfile
 ├── docker-compose.yml
 └── README.md
-📸 Assets
-Add dashboard.png, history.png in screenshots/ folder
+```
 
-(Optional) Add a demo walkthrough video in /demo/ and embed it:
+---
 
-html
-Copy
-Edit
-<!-- Inside README.md if GitHub supports video in your case -->
+## 🎬 Optional: Add Demo Video
+
+Place demo video in `/demo/` and embed like this:
+
+```html
 <video controls width="100%">
   <source src="demo/taskie_demo.mp4" type="video/mp4">
 </video>
+```
 
-📄 License
-MIT License © Laiba Muzammal
+---
 
-Built with 💙 for learning, growth, and resume building. 
+## 📄 License
+
+MIT License © [Laiba Muzammal](https://github.com/Laiba-muzammal)
+
+---
+
+> Built with 💙 for learning, personal productivity, and resume building.
+
+

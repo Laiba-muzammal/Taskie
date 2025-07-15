@@ -82,7 +82,7 @@ USE_TZ = True
 # Authentication URLs
 LOGIN_URL = 'login'  # Add this if you have a login view
 LOGIN_REDIRECT_URL = 'task-list'
-LOGOUT_REDIRECT_URL =None
+LOGOUT_REDIRECT_URL ='home'
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'

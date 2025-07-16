@@ -135,6 +135,15 @@ body {
   transition: transform 0.2s ease;
 }
 
+
+.card-header {
+    background-color: #6f42c1;
+    color: white;
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+    padding: 0.75rem 1.25rem;
+}
+
+
 .card:hover {
   transform: translateY(-3px);
 }
@@ -207,4 +216,31 @@ body {
   height: 3rem;
   margin-bottom: 1rem;
   color: #dee2e6;
+}
+
+
+/* Purple buttons */
+.btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-primary:hover {
+    background-color: #5a32a8;
+    border-color: #5a32a8;
+}
+
+.bg-todo {
+    background-color: #6f42c1; /* Bootstrap purple color */
+    color: white;
+}
+
+.btn-outline-primary {
+    color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-outline-primary:hover {
+    background-color: #6f42c1;
+    color: white;
 }

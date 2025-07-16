@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from django.contrib.auth import views as auth_views
 
+
 urlpatterns = [
     path('', views.home, name="home"),
     path('signup/', views.signup, name="signup"),
@@ -10,10 +11,6 @@ urlpatterns = [
     path('create-task/', views.create_task, name="create-task"),
     path('update/<int:id>/', views.update, name="update-task"),
     path('login/', auth_views.LoginView.as_view(), name='login'),  
-<<<<<<< HEAD
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-=======
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'), 
->>>>>>> fe1f0396da73afec86163bd415ecd628e5c4bc56
-    path('task_history/', views.task_history, name='task-history')
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),  # ✅ only once
+    path('task_history/', views.task_history, name='task-history'),
 ]

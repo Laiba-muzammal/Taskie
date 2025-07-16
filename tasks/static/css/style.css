@@ -4,6 +4,8 @@
   --primary-dark: #5a32a8;
   --warning-color: #ffc107;
   --success-color: #28a745;
+  --danger-color: #dc3545;
+  --info-color: #17a2b8;
 }
 
 /* Base Styles */
@@ -17,7 +19,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  background-color: var(--primary-color) ;
+  background-color: var(--primary-color);
   padding: 0.8rem 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -33,9 +35,74 @@ body {
   margin-right: 0.5rem;
 }
 
+/* Task History Styles */
+.task-history-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+}
+
+.history-table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.history-table th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+}
+
+.history-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: top;
+}
+
+.history-table tr:nth-child(even) {
+  background-color: rgba(0,0,0,0.02);
+}
+
+.history-table tr:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.action-badge {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+
+.badge-created {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.badge-updated {
+  background-color: var(--warning-color);
+  color: #212529;
+}
+
+.badge-deleted {
+  background-color: var(--danger-color);
+  color: white;
+}
+
 /* Button Styles */
 .btn-primary {
-  background-color: var(--primary-color) ;
+  background-color: var(--primary-color);
   border-color: var(--primary-color);
   transition: all 0.3s ease;
 }
@@ -44,16 +111,6 @@ body {
   background-color: var(--primary-dark);
   border-color: var(--primary-dark);
   transform: translateY(-1px);
-}
-
-.btn-outline-primary {
-  color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-
-.btn-outline-primary:hover {
-  background-color: var(--primary-color);
-  color: white;
 }
 
 /* Task Board Styles */
@@ -82,46 +139,11 @@ body {
   transform: translateY(-3px);
 }
 
-.card-header {
-  background-color: #6f42c1;
-  color: white;
-  border-radius: 0.5rem 0.5rem 0 0 !important;
-  padding: 0.75rem 1.25rem;
-  font-weight: 600;
-}
-
-.card-header.bg-todo {
-  background-color: var(--primary-color);
-}
-
-.card-header.bg-progress {
-  background-color: var(--warning-color);
-}
-
-.card-header.bg-completed {
-  background-color: var(--success-color);
-}
-
-.task-item {
-  border-bottom: 1px solid #eee;
-  padding: 1rem;
-  transition: background-color 0.2s ease;
-}
-
-.task-item:hover {
-  background-color: #f8f9fa;
-}
-
 /* Form Styles */
 .form-control:focus,
 .form-select:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.1);
-}
-
-.form-label {
-  font-weight: 500;
-  margin-bottom: 0.25rem;
 }
 
 /* Status Badges */
@@ -131,34 +153,6 @@ body {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-}
-
-.badge-pending {
-  background-color: #e2e3e5;
-  color: #383d41;
-}
-
-.badge-progress {
-  background-color: #fff3cd;
-  color: #856404;
-}
-
-.badge-completed {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-/* Priority Indicators */
-.priority-high {
-  border-left: 3px solid #dc3545;
-}
-
-.priority-medium {
-  border-left: 3px solid #fd7e14;
-}
-
-.priority-low {
-  border-left: 3px solid #28a745;
 }
 
 /* Footer Styles */
@@ -171,21 +165,21 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .task-history-container {
+    padding: 1rem;
+  }
+  
+  .history-table th, 
+  .history-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
   .task-board {
     flex-direction: column;
   }
   
   .task-column {
     min-width: 100%;
-  }
-  
-  .display-4 {
-    font-size: 2.25rem;
-  }
-  
-  .btn-lg {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
   }
 }
 
@@ -199,8 +193,18 @@ body {
   animation: fadeIn 0.3s ease forwards;
 }
 
-/* Drag and drop styling */
-.task-item.dragging {
-  opacity: 0.5;
-  border: 2px dashed var(--primary-color);
+/* Empty state styling */
+.empty-history {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+.empty-history svg {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  color: #dee2e6;
 }
